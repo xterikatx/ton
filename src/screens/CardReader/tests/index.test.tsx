@@ -3,15 +3,15 @@ import React from 'react';
 import MockAdapter from 'axios-mock-adapter';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import CardReader from '..';
-import api, {response} from '../../../services/api';
+import api, {products} from '../../../services/api';
 
 const mock = new MockAdapter(api);
 
-mock.onGet('/products').reply(200, response);
+mock.onGet('/products').reply(200, products);
 
 const queryClient = new QueryClient();
 
-test('should render item correctly', async () => {
+it('should render item correctly', async () => {
   const {getByText, getAllByTestId} = render(
     <QueryClientProvider client={queryClient}>
       <CardReader />
@@ -21,10 +21,10 @@ test('should render item correctly', async () => {
   expect(getByText('Escolha uma opção')).toBeTruthy();
 
   await waitFor(() =>
-    expect(getAllByTestId('product-item')).toHaveLength(response.length),
+    expect(getAllByTestId('product-item')).toHaveLength(products.length),
   );
 
-  response.forEach((product, index) => {
+  products.forEach((product, index) => {
     const {name, description} = product;
     const listItem = getAllByTestId('product-item')[index];
 

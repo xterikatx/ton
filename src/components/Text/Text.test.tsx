@@ -2,7 +2,7 @@ import React from 'react';
 import {render} from '@testing-library/react-native';
 import Text from '.';
 
-describe('Text component', () => {
+describe('Text', () => {
   it('should render text correctly', () => {
     const {getByText} = render(<Text>Text</Text>);
 

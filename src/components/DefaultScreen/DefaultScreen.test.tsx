@@ -3,7 +3,7 @@ import DefaultScreen from './index';
 import React from 'react';
 import {Text} from 'react-native';
 
-describe('DefaultScreen component', () => {
+describe('DefaultScreen', () => {
   it('renders children correctly', () => {
     const testId = 'child-component';
     const {getByTestId} = render(
