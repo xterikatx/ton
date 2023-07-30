@@ -1,20 +1,15 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import {SafeAreaView} from 'react-native';
 
-import CardReader from './src/screens/CardReader';
+import Routes from './src/routes';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 
 function App(): JSX.Element {
+  const queryClient = new QueryClient();
+
   return (
-    <SafeAreaView>
-      <CardReader />
-    </SafeAreaView>
+    <QueryClientProvider client={queryClient}>
+      <Routes />
+    </QueryClientProvider>
   );
 }
 

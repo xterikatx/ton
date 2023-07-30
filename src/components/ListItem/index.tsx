@@ -1,17 +1,26 @@
 import React from 'react';
 import * as S from './styles';
 import Text from '../Text';
-import {Image} from 'react-native';
+import {Image, TouchableOpacityProps} from 'react-native';
 
 interface Props {
   title: string;
   description: string;
   image?: string;
+  onPress: TouchableOpacityProps['onPress'];
+  testID?: TouchableOpacityProps['testID'];
 }
 
-export default function ListItem({title, description, image, ...rest}: Props) {
+export default function ListItem({
+  title,
+  description,
+  image,
+  onPress,
+  testID = 'list-item',
+  ...rest
+}: Props) {
   return (
-    <S.Container {...rest}>
+    <S.Container onPress={onPress} testID={testID} {...rest}>
       <S.Wrapper>
         <S.LeftContent>
           {!!image && (

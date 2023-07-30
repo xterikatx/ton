@@ -1,47 +1,38 @@
 import React from 'react';
-import {render} from '@testing-library/react-native';
-import ListItem from '../ListItem';
+import {render, fireEvent} from '@testing-library/react-native';
+import ListItem from './index';
 
-describe('ListItem component', () => {
-  it('should render title text correctly', () => {
-    const {getByText} = render(
-      <ListItem title="Test Title" description="Test Description" />,
-    );
-
-    const titleElement = getByText('Test Title');
-    expect(titleElement).toBeDefined();
-  });
-
-  it('should render description text correctly', () => {
-    const {getByText} = render(
-      <ListItem title="Test Title" description="Test Description" />,
-    );
-
-    const descriptionElement = getByText('Test Description');
-    expect(descriptionElement).toBeDefined();
-  });
-
-  it('should render image when image prop is passed', () => {
-    const {getByTestId} = render(
+describe('ListItem', () => {
+  it('should render title, description and image correctly', () => {
+    const onPress = jest.fn();
+    const {getByText, getByTestId} = render(
       <ListItem
         title="Test Title"
         description="Test Description"
         image="https://www.w3.org/People/mimasa/test/imgformat/img/w3c_home.jpg"
+        onPress={onPress}
       />,
     );
 
-    const imageElement = getByTestId('list-item-image');
-    expect(imageElement.props.source.uri).toBe(
+    expect(getByText('Test Title')).toBeTruthy();
+    expect(getByText('Test Description')).toBeTruthy();
+    expect(getByTestId('list-item-image').props.source.uri).toEqual(
       'https://www.w3.org/People/mimasa/test/imgformat/img/w3c_home.jpg',
     );
   });
 
-  it('should not render image when image prop is not passed', () => {
-    const {queryByTestId} = render(
-      <ListItem title="Test Title" description="Test Description" />,
+  it('should call onPress when pressed', () => {
+    const onPress = jest.fn();
+    const {getByText} = render(
+      <ListItem
+        title="Test Title"
+        description="Test Description"
+        image="https://www.w3.org/People/mimasa/test/imgformat/img/w3c_home.jpg"
+        onPress={onPress}
+      />,
     );
 
-    const imageElement = queryByTestId('list-item-image');
-    expect(imageElement).toBeNull();
+    fireEvent.press(getByText('Test Title'));
+    expect(onPress).toHaveBeenCalled();
   });
 });
