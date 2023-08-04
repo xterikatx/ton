@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Text from '../../components/Text';
 import * as S from './styles';
 import DefaultScreen from '../../components/DefaultScreen';
@@ -10,6 +10,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../routes';
 import HeaderMenu from '../../components/HeaderMenu ';
+import InfoModal from '../../components/InfoModal';
 
 export default function CardReader() {
   const navigation =
@@ -21,10 +22,15 @@ export default function CardReader() {
     api.get('/products').then(response => response.data);
 
   const {data: products, isLoading} = useQuery(['products'], fetchProducts);
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <>
-      <HeaderMenu name="Maquininhas" navigation={navigation} />
+      <HeaderMenu
+        name="Maquininhas"
+        navigation={navigation}
+        onPressInfo={() => setModalVisible(true)}
+      />
       <DefaultScreen>
         <S.Header>
           <Text variant="header">Escolha uma opção</Text>
@@ -51,6 +57,12 @@ export default function CardReader() {
             scrollEnabled={false}
           />
         )}
+
+        <InfoModal
+          text="Maquininhas pra você vender mais. Super Conta digital com Pix e TapTon para aceitar cartão no celular. Quem tem Ton, tem tudo"
+          visible={modalVisible}
+          onClose={() => setModalVisible(false)}
+        />
       </DefaultScreen>
     </>
   );

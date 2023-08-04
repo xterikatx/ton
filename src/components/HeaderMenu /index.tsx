@@ -7,11 +7,13 @@ import Text from '../Text';
 
 interface Props {
   name: string;
+  onPressInfo?: () => void;
 }
 
 export default function HeaderMenu({
   name,
   navigation,
+  onPressInfo,
 }: Props & {navigation?: any}) {
   return (
     <SafeAreaView>
@@ -31,6 +33,7 @@ export default function HeaderMenu({
           size={22}
           color={'#fff'}
           testID="question-icon"
+          onPress={onPressInfo}
         />
       </S.Container>
     </SafeAreaView>
