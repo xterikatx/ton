@@ -10,7 +10,6 @@ import {ActivityIndicator} from 'react-native';
 export default function CardReaderDetail() {
   const route = useRoute<RouteProp<RootStackParamList, 'CardReaderDetail'>>();
   const {productId} = route.params;
-  console.log(productId);
 
   const fetchProductDetail = (id: string) =>
     api.get(`/product/${id}`).then(response => response.data);

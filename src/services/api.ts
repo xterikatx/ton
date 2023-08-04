@@ -19,27 +19,27 @@ export const products = [
     id: '000199abc1',
     characteristics: [
       {
-        icon: 'example',
+        icon: 'bus',
         description: 'Frete e troca grátis pra todo o Brasil',
       },
       {
-        icon: 'example',
+        icon: 'calendar',
         description: 'Receba suas vendas em 1 dia útil',
       },
       {
-        icon: 'example',
+        icon: 'cellphone-wireless',
         description: 'Precisa de celular com internet',
       },
       {
-        icon: 'example',
+        icon: 'nfc',
         description: 'Receba por aproximação (NFC)',
       },
       {
-        icon: 'example',
+        icon: 'message-minus',
         description: 'Comprovante por SMS',
       },
       {
-        icon: 'example',
+        icon: 'cash-check',
         description: 'Venda pelo App com TapTon, Link, Pix e Boleto',
       },
     ],
@@ -57,27 +57,27 @@ export const products = [
     id: '000199abc2',
     characteristics: [
       {
-        icon: 'example',
+        icon: 'bus',
         description: 'Frete e troca grátis pra todo o Brasil',
       },
       {
-        icon: 'example',
+        icon: 'calendar',
         description: 'Receba suas vendas em 1 dia útil',
       },
       {
-        icon: 'example',
+        icon: 'wifi',
         description: 'Com Chip 2G e Wi-Fi',
       },
       {
-        icon: 'example',
+        icon: 'nfc',
         description: 'Receba por aproximação (NFC)',
       },
       {
-        icon: 'example',
+        icon: 'message-minus',
         description: 'Comprovante por SMS',
       },
       {
-        icon: 'example',
+        icon: 'cash-check',
         description: 'Venda pelo App com TapTon, Link, Pix e Boleto',
       },
     ],
@@ -95,31 +95,31 @@ export const products = [
     id: '000199abc3',
     characteristics: [
       {
-        icon: 'example',
+        icon: 'bus',
         description: 'Frete e troca grátis pra todo o Brasil',
       },
       {
-        icon: 'example',
+        icon: 'calendar',
         description: 'Receba suas vendas em 1 dia útil',
       },
       {
-        icon: 'example',
+        icon: 'wifi',
         description: 'Com Chip 3G e Wi-Fi',
       },
       {
-        icon: 'example',
+        icon: 'nfc',
         description: 'Receba por aproximação (NFC)',
       },
       {
-        icon: 'example',
+        icon: 'message-minus',
         description: 'Comprovante por SMS',
       },
       {
-        icon: 'example',
+        icon: 'cash-check',
         description: 'Venda pelo App com TapTon, Link, Pix e Boleto',
       },
       {
-        icon: 'example',
+        icon: 'battery-arrow-up',
         description: 'Bateria de longa duração',
       },
     ],
@@ -137,31 +137,31 @@ export const products = [
     id: '000199abc4',
     characteristics: [
       {
-        icon: 'example',
+        icon: 'bus',
         description: 'Frete e troca grátis pra todo o Brasil',
       },
       {
-        icon: 'example',
+        icon: 'calendar',
         description: 'Receba suas vendas em 1 dia útil',
       },
       {
-        icon: 'example',
+        icon: 'wifi',
         description: 'Com Chip 3G e Wi-Fi',
       },
       {
-        icon: 'example',
+        icon: 'nfc',
         description: 'Receba por aproximação (NFC)',
       },
       {
-        icon: 'example',
+        icon: 'message-minus',
         description: 'Comprovante por SMS',
       },
       {
-        icon: 'example',
+        icon: 'cash-check',
         description: 'Venda pelo App com TapTon, Link, Pix e Boleto',
       },
       {
-        icon: 'example',
+        icon: 'qrcode',
         description: 'Aceite Pix QR Code na Maquininha',
       },
     ],
@@ -179,39 +179,39 @@ export const products = [
     id: '000199abc5',
     characteristics: [
       {
-        icon: 'example',
+        icon: 'bus',
         description: 'Frete e troca grátis pra todo o Brasil',
       },
       {
-        icon: 'example',
+        icon: 'calendar',
         description: 'Receba suas vendas em 1 dia útil',
       },
       {
-        icon: 'example',
+        icon: 'wifi',
         description: 'Com Chip 3G e Wi-Fi',
       },
       {
-        icon: 'example',
+        icon: 'nfc',
         description: 'Receba por aproximação (NFC)',
       },
       {
-        icon: 'example',
+        icon: 'message-minus',
         description: 'Comprovante por SMS',
       },
       {
-        icon: 'example',
+        icon: 'wifi',
         description: 'Venda pelo App com TapTon, Link, Pix e Boleto',
       },
       {
-        icon: 'example',
+        icon: 'battery-arrow-up',
         description: 'Bateria de longa duração',
       },
       {
-        icon: 'example',
+        icon: 'android',
         description: 'Sistema Android com Visor Touchscreen',
       },
       {
-        icon: 'example',
+        icon: 'qrcode',
         description: 'Aceite Pix QR Code na Maquininha',
       },
     ],
