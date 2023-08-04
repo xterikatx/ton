@@ -1,7 +1,7 @@
 import React from 'react';
 import DefaultScreen from '../../components/DefaultScreen';
 import ImageGallery from '../../components/ImageGallery';
-import {RouteProp, useRoute} from '@react-navigation/native';
+import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {RootStackParamList} from '../../routes';
 import api from '../../services/api';
 import {useQuery} from '@tanstack/react-query';

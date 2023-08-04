@@ -9,11 +9,22 @@ interface Props {
   name: string;
 }
 
-export default function HeaderMenu({name}: Props) {
+export default function HeaderMenu({
+  name,
+  navigation,
+}: Props & {navigation?: any}) {
   return (
     <SafeAreaView>
       <S.Container>
-        <Icon name="menu" size={22} color={'#fff'} testID="menu-icon" />
+        {!!navigation && (
+          <Icon
+            name="menu"
+            size={22}
+            color={'#fff'}
+            testID="menu-icon"
+            onPress={() => navigation.openDrawer()}
+          />
+        )}
         <Text variant="white">{name}</Text>
         <Icon
           name="progress-question"

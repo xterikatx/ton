@@ -24,7 +24,7 @@ export default function CardReader() {
 
   return (
     <>
-      <HeaderMenu name="Maquininhas" />
+      <HeaderMenu name="Maquininhas" navigation={navigation} />
       <DefaultScreen>
         <S.Header>
           <Text variant="header">Escolha uma opção</Text>
