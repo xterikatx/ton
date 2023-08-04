@@ -48,6 +48,7 @@ const ImageGallery = ({images}: Props) => {
         horizontal
         renderItem={renderImage}
         keyExtractor={(item, index) => index.toString()}
+        scrollEnabled={false}
       />
     </S.Container>
   );

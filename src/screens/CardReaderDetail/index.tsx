@@ -30,6 +30,7 @@ export default function CardReaderDetail() {
             <ImageGallery images={product?.images || []} />
           </S.ImageGalleryContainer>
           <FlatList
+            scrollEnabled={false}
             data={product?.characteristics}
             renderItem={({item}) => (
               <IconLabel label={item?.description} icon={item?.icon} />

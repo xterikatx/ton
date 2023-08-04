@@ -45,6 +45,7 @@ export default function CardReader() {
               }
             />
           )}
+          scrollEnabled={false}
         />
       )}
     </DefaultScreen>

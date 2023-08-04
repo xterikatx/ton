@@ -1,5 +1,6 @@
 import React from 'react';
 import * as S from './styles';
+import {ScrollView} from 'react-native';
 
 interface Props {
   children: React.ReactNode;
@@ -8,7 +9,9 @@ interface Props {
 export default function DefaultScreen({children}: Props) {
   return (
     <S.SafeAreaView>
-      <S.View>{children}</S.View>
+      <ScrollView>
+        <S.View>{children}</S.View>
+      </ScrollView>
     </S.SafeAreaView>
   );
 }
