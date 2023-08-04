@@ -9,7 +9,7 @@ interface IconLabelProps {
 
 const IconLabel: React.FC<IconLabelProps> = ({icon, label}) => (
   <S.Container>
-    <S.Icon name={icon} size={26} color="#00CC2C" />
+    <S.Icon name={icon} size={26} color="#00CC2C" testID="icon" />
     <Text variant="primary">{label}</Text>
   </S.Container>
 );

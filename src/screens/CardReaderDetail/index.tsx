@@ -23,7 +23,7 @@ export default function CardReaderDetail() {
   return (
     <DefaultScreen>
       {isLoading && !product ? (
-        <ActivityIndicator color={'#222'} />
+        <ActivityIndicator color={'#222'} testID="ActivityIndicator" />
       ) : (
         <>
           <S.ImageGalleryContainer>
