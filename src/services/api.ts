@@ -10,7 +10,7 @@ export const products = [
     name: 'T1 Promo',
     description: 'À partir de 12x de R$ 8,90',
     images: [
-      'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t1-2',
+      'https://i.ibb.co/T1P7Bs2/t1.png',
       'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t1-2',
       'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t1-2',
     ],
@@ -48,7 +48,7 @@ export const products = [
     name: 'T1 Chip Promo',
     description: 'À partir de 12x de R$ 23,90',
     images: [
-      'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t1-chip-2',
+      'https://i.ibb.co/XyT0bxR/t1-chip.png',
       'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t1-chip-2',
       'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t1-chip-2',
     ],
@@ -86,7 +86,7 @@ export const products = [
     name: 'T2+ PromoTon',
     description: 'À partir de 12x de R$ 15,90',
     images: [
-      'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t2-2',
+      'https://i.ibb.co/d6tHnH7/t2-promo.png',
       'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t2-2',
       'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t2-2',
     ],
@@ -128,7 +128,7 @@ export const products = [
     name: 'T3 PromoTon',
     description: 'À partir de 12x de R$ 32,90',
     images: [
-      'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t3-2',
+      'https://i.ibb.co/WfxX7fY/t3-promo.png',
       'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t3-2',
       'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t3-2',
     ],
@@ -170,7 +170,7 @@ export const products = [
     name: 'T3 Smart PromoTon',
     description: 'À partir de 12x de R$ 39,90',
     images: [
-      'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t3-smart-2',
+      'https://i.ibb.co/2ZQxTbV/t3-smart-promo.png',
       'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t3-smart-2',
       'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_100/site-ton/maquininhas/machine-t3-smart-2',
     ],
