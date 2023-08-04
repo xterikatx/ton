@@ -222,4 +222,12 @@ const mock = new MockAdapter(api);
 
 mock.onGet('/products').reply(200, products);
 
+mock.onGet(/\/product\/\w+/).reply(config => {
+  const id = config.url?.split('/').pop();
+
+  const product = products.find(productSelected => productSelected.id === id);
+
+  return product ? [200, product] : [404, {message: 'Product not found'}];
+});
+
 export default api;

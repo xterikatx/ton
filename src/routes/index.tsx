@@ -4,7 +4,12 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import CardReader from '../screens/CardReader';
 import CardReaderDetail from '../screens/CardReaderDetail';
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+  CardReader: undefined;
+  CardReaderDetail: {productId: string};
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const options = {
   headerShown: false,
