@@ -1,7 +1,7 @@
 import React from 'react';
 import {TextStyled} from './styles';
 
-type VariantType = 'header' | 'bold' | 'primary' | 'secondary';
+type VariantType = 'header' | 'bold' | 'primary' | 'secondary' | 'white';
 
 interface Props {
   variant?: VariantType;

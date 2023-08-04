@@ -1,6 +1,6 @@
 import {styled} from 'styled-components/native';
 
-export type VariantType = 'header' | 'bold' | 'primary' | 'secondary';
+export type VariantType = 'header' | 'bold' | 'primary' | 'secondary' | 'white';
 
 const variants: Record<
   VariantType,
@@ -25,6 +25,11 @@ const variants: Record<
     fontSize: '16px',
     fontWeight: 'normal',
     color: '#777',
+  },
+  white: {
+    fontSize: '16px',
+    fontWeight: 'normal',
+    color: '#fff',
   },
 };
 

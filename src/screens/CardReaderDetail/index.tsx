@@ -8,6 +8,7 @@ import {useQuery} from '@tanstack/react-query';
 import {ActivityIndicator, FlatList} from 'react-native';
 import IconLabel from '../../components/IconLabel';
 import * as S from './styles';
+import HeaderMenu from '../../components/HeaderMenu ';
 
 export default function CardReaderDetail() {
   const route = useRoute<RouteProp<RootStackParamList, 'CardReaderDetail'>>();
@@ -21,23 +22,26 @@ export default function CardReaderDetail() {
   );
 
   return (
-    <DefaultScreen>
-      {isLoading && !product ? (
-        <ActivityIndicator color={'#222'} testID="ActivityIndicator" />
-      ) : (
-        <>
-          <S.ImageGalleryContainer>
-            <ImageGallery images={product?.images || []} />
-          </S.ImageGalleryContainer>
-          <FlatList
-            scrollEnabled={false}
-            data={product?.characteristics}
-            renderItem={({item}) => (
-              <IconLabel label={item?.description} icon={item?.icon} />
-            )}
-          />
-        </>
-      )}
-    </DefaultScreen>
+    <>
+      <HeaderMenu name={product?.name} />
+      <DefaultScreen>
+        {isLoading && !product ? (
+          <ActivityIndicator color={'#222'} testID="ActivityIndicator" />
+        ) : (
+          <>
+            <S.ImageGalleryContainer>
+              <ImageGallery images={product?.images || []} />
+            </S.ImageGalleryContainer>
+            <FlatList
+              scrollEnabled={false}
+              data={product?.characteristics}
+              renderItem={({item}) => (
+                <IconLabel label={item?.description} icon={item?.icon} />
+              )}
+            />
+          </>
+        )}
+      </DefaultScreen>
+    </>
   );
 }
