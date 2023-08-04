@@ -24,7 +24,11 @@ function Routes() {
           component={CardReader}
           options={options}
         />
-        <Stack.Screen name="CardReaderDetail" component={CardReaderDetail} />
+        <Stack.Screen
+          name="CardReaderDetail"
+          component={CardReaderDetail}
+          options={options}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -5,7 +5,9 @@ import {RouteProp, useRoute} from '@react-navigation/native';
 import {RootStackParamList} from '../../routes';
 import api from '../../services/api';
 import {useQuery} from '@tanstack/react-query';
-import {ActivityIndicator} from 'react-native';
+import {ActivityIndicator, FlatList} from 'react-native';
+import IconLabel from '../../components/IconLabel';
+import * as S from './styles';
 
 export default function CardReaderDetail() {
   const route = useRoute<RouteProp<RootStackParamList, 'CardReaderDetail'>>();
@@ -20,11 +22,19 @@ export default function CardReaderDetail() {
 
   return (
     <DefaultScreen>
-      {isLoading ? (
+      {isLoading && !product ? (
         <ActivityIndicator color={'#222'} />
       ) : (
         <>
-          <ImageGallery images={product?.images || []} />
+          <S.ImageGalleryContainer>
+            <ImageGallery images={product?.images || []} />
+          </S.ImageGalleryContainer>
+          <FlatList
+            data={product?.characteristics}
+            renderItem={({item}) => (
+              <IconLabel label={item?.description} icon={item?.icon} />
+            )}
+          />
         </>
       )}
     </DefaultScreen>

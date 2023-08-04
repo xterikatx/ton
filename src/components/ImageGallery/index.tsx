@@ -25,12 +25,13 @@ const ImageGallery = ({images}: Props) => {
           setActiveImage(item);
           setActiveIndex(index);
         }}>
-        <S.ThumbnailImage
-          source={{uri: item}}
-          resizeMode="contain"
-          active={index === activeIndex}
-          testID={`image-${index}`}
-        />
+        <S.ThumbnailContainer active={index === activeIndex}>
+          <S.ThumbnailImage
+            source={{uri: item}}
+            resizeMode="contain"
+            testID={`image-${index}`}
+          />
+        </S.ThumbnailContainer>
       </TouchableOpacity>
     );
   };

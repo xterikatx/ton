@@ -27,7 +27,7 @@ export const products = [
         description: 'Receba suas vendas em 1 dia útil',
       },
       {
-        icon: 'cellphone-wireless',
+        icon: 'cellphone-information',
         description: 'Precisa de celular com internet',
       },
       {
@@ -199,7 +199,7 @@ export const products = [
         description: 'Comprovante por SMS',
       },
       {
-        icon: 'wifi',
+        icon: 'cash-check',
         description: 'Venda pelo App com TapTon, Link, Pix e Boleto',
       },
       {
